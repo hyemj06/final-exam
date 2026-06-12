@@ -1,1 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI와 비즈니스 애플리케이션 기말고사</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin:0; font-family: "Pretendard", "Noto Sans KR", Arial, sans-serif;
+  background:#0d1424; color:#172033; overflow:hidden;
+}
+.slide {
+  display:none; width:100vw; height:100vh; padding:5vh 6vw;
+  background:linear-gradient(135deg,#f8fbff 0%,#edf4ff 52%,#f7f4ff 100%);
+}
+.slide.active { display:flex; flex-direction:column; justify-content:center; }
+h1,h2,h3 { margin:0; letter-spacing:-0.04em; }
+h1 { font-size:54px; color:#0b1b3f; }
+h2 { font-size:38px; color:#0b1b3f; margin-bottom:22px; }
+p, li { font-size:21px; line-height:1.65; }
+.title-card {
+  border:1px solid rgba(20,40,80,.12); background:rgba(255,255,255,.78);
+  border-radius:28px; padding:56px; box-shadow:0 24px 70px rgba(10,30,70,.14);
+}
+.meta { margin-top:28px; font-size:24px; color:#3b4d69; line-height:1.8; }
+.infographic {
+  width:100%; max-height:75vh; background:white; border-radius:28px; padding:24px;
+  box-shadow:0 22px 55px rgba(15,45,90,.12);
+}
+.model { text-align:right; margin-top:10px; color:#52627a; font-size:14px; }
+.grid10 { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
+.card {
+  background:#fff; border:1px solid #d9e6ff; border-radius:18px; padding:16px;
+  min-height:112px; box-shadow:0 10px 24px rgba(30,60,120,.07);
+}
+.num { display:inline-flex; width:28px; height:28px; align-items:center; justify-content:center;
+  border-radius:50%; background:#173b78; color:white; font-weight:700; font-size:15px; margin-bottom:8px; }
+.card b { display:block; font-size:18px; color:#102a56; margin-bottom:4px; }
+.card span { display:block; font-size:14px; color:#50617a; line-height:1.35; }
+.reusable { margin-top:18px; padding:18px 24px; border-radius:18px; background:#102a56; color:white; font-size:20px; }
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:stretch; }
+.panel {
+  background:rgba(255,255,255,.82); border:1px solid #d9e6ff; border-radius:24px;
+  padding:28px; box-shadow:0 18px 45px rgba(20,50,100,.08);
+}
+.panel h3 { font-size:26px; margin-bottom:14px; color:#173b78; }
+.table { width:100%; border-collapse:collapse; background:white; border-radius:18px; overflow:hidden; }
+.table th,.table td { border:1px solid #d7e2f7; padding:14px; font-size:18px; line-height:1.45; vertical-align:top; }
+.table th { background:#173b78; color:#fff; }
+.finance-img {
+  width:100%; height:78vh; object-fit:contain; background:#fff; border-radius:18px;
+  box-shadow:0 20px 50px rgba(15,45,90,.13);
+}
+.big-number { font-size:40px; font-weight:800; color:#173b78; }
+.note { font-size:18px; color:#50617a; margin-top:10px; }
+.help {
+  position:fixed; inset:0; background:rgba(5,10,25,.62); display:none;
+  align-items:center; justify-content:center; z-index:20;
+}
+.help-box { background:white; padding:34px 42px; border-radius:22px; width:420px; box-shadow:0 20px 70px rgba(0,0,0,.2); }
+.help.show { display:flex; }
+</style>
+</head>
+<body>
 
+<section class="slide active">
+  <div class="title-card">
+    <h1>AI와 비즈니스 애플리케이션<br>기말고사 답안</h1>
+    <div class="meta">
+      이화여자대학교 경영대학 경영학부<br>
+      학번: 여기에 학번 입력<br>
+      이름: 장민혜
+    </div>
+  </div>
+</section>
+
+<section class="slide">
+  <h2>ChatGPT 답변 품질을 높이는 10가지 프롬프트 기법</h2>
+  <div class="infographic">
+    <div class="grid10">
+      <div class="card"><span class="num">1</span><b>구체적 답변 요청</b><span>추상적 설명 대신 예시와 조건을 요구한다.</span></div>
+      <div class="card"><span class="num">2</span><b>불확실성 표시</b><span>확신할 수 없는 내용은 한계를 밝히게 한다.</span></div>
+      <div class="card"><span class="num">3</span><b>간결한 요약</b><span>핵심만 짧게 정리하도록 범위를 제한한다.</span></div>
+      <div class="card"><span class="num">4</span><b>실행 단계 제시</b><span>오늘 바로 할 수 있는 행동으로 바꾼다.</span></div>
+      <div class="card"><span class="num">5</span><b>질문 먼저 하기</b><span>부족한 정보를 먼저 확인하게 한다.</span></div>
+      <div class="card"><span class="num">6</span><b>반대 관점 포함</b><span>한쪽 결론에 치우치지 않게 만든다.</span></div>
+      <div class="card"><span class="num">7</span><b>전문가식 분석</b><span>원인, 위험, 대안을 체계적으로 검토한다.</span></div>
+      <div class="card"><span class="num">8</span><b>모르면 모른다고 하기</b><span>추측이나 환각 가능성을 낮춘다.</span></div>
+      <div class="card"><span class="num">9</span><b>구조화된 형식</b><span>제목, 불릿, 표로 읽기 쉽게 정리한다.</span></div>
+      <div class="card"><span class="num">10</span><b>명확한 입장</b><span>비교 후 최종 판단을 분명히 제시한다.</span></div>
+    </div>
+    <div class="reusable"><b>Reusable Prompt</b> · 구체적 예시, 불확실성, 반대 관점, 실행 단계를 포함하여 간결하고 구조화된 답변을 제공하라.</div>
+  </div>
+  <div class="model">Created with ChatGPT GPT-5.5 Thinking</div>
+</section>
+
+<section class="slide">
+  <h2>10 Prompt Techniques to Improve ChatGPT Answers</h2>
+  <div class="infographic">
+    <div class="grid10">
+      <div class="card"><span class="num">1</span><b>Ask for specifics</b><span>Request concrete details and examples.</span></div>
+      <div class="card"><span class="num">2</span><b>Show uncertainty</b><span>Ask the model to state limits and confidence.</span></div>
+      <div class="card"><span class="num">3</span><b>Keep it concise</b><span>Limit length and focus on the main point.</span></div>
+      <div class="card"><span class="num">4</span><b>Give action steps</b><span>Turn advice into practical next moves.</span></div>
+      <div class="card"><span class="num">5</span><b>Ask questions first</b><span>Clarify missing context before answering.</span></div>
+      <div class="card"><span class="num">6</span><b>Add a contrarian view</b><span>Include opposing arguments or risks.</span></div>
+      <div class="card"><span class="num">7</span><b>Analyze like an expert</b><span>Review causes, trade-offs, and implications.</span></div>
+      <div class="card"><span class="num">8</span><b>Admit unknowns</b><span>Avoid guessing when evidence is limited.</span></div>
+      <div class="card"><span class="num">9</span><b>Use structure</b><span>Use headings, bullets, or tables.</span></div>
+      <div class="card"><span class="num">10</span><b>Take a clear stance</b><span>Compare options and conclude clearly.</span></div>
+    </div>
+    <div class="reusable"><b>Reusable Prompt</b> · Give me a concise, well-structured answer. Provide specific examples, highlight uncertainties, include a contrarian perspective, and end with actionable steps tailored to my situation.</div>
+  </div>
+  <div class="model">Created with ChatGPT GPT-5.5 Thinking</div>
+</section>
+
+<section class="slide">
+  <h2>기능적 프롬프트의 구성요소 검토</h2>
+  <table class="table">
+    <tr><th>구성요소</th><th>의미</th><th>기사의 10개 프롬프트와의 관련성</th></tr>
+    <tr><td>역할</td><td>AI가 어떤 관점에서 답할지 정한다.</td><td>전문가처럼 분석하거나 반대 관점을 제시하게 하여 답변의 관점을 구체화한다.</td></tr>
+    <tr><td>맥락</td><td>사용자의 상황, 목적, 조건을 제공한다.</td><td>질문 먼저 하기, 맞춤형 실행 단계 요구는 부족한 맥락을 보완한다.</td></tr>
+    <tr><td>작업</td><td>AI가 수행해야 할 일을 명확히 지정한다.</td><td>요약, 분석, 비교, 검토, 실행계획 제시 등 수행 과업이 분명하다.</td></tr>
+    <tr><td>출력 형식</td><td>결과를 어떤 형태로 제시할지 정한다.</td><td>제목, 불릿, 표 등 구조화된 답변을 요구해 가독성을 높인다.</td></tr>
+    <tr><td>제약 조건</td><td>분량, 정확성, 불확실성 표시 등 제한을 둔다.</td><td>간결성, 모르면 모른다고 하기, 불확실성 표시가 환각과 장황함을 줄인다.</td></tr>
+  </table>
+</section>
+
+<section class="slide">
+  <h2>기능적 프롬프트 작성 원리 검토</h2>
+  <div class="two-col">
+    <div class="panel">
+      <h3>적합한 점</h3>
+      <ul>
+        <li>질문 목적을 명확히 하여 일반적이고 모호한 답변을 줄인다.</li>
+        <li>출력 방식을 구조화해 사용자가 바로 활용할 수 있게 한다.</li>
+        <li>불확실성, 반대 관점, 실행 단계를 포함해 답변의 신뢰성과 실용성을 높인다.</li>
+        <li>반복해서 사용할 수 있는 재활용 프롬프트 형태라 활용성이 높다.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>보완할 점</h3>
+      <ul>
+        <li>과제, 독자, 분량, 평가 기준을 더 구체적으로 지정하면 결과가 더 안정적이다.</li>
+        <li>최신 정보가 필요한 경우 출처 확인이나 검색 요구가 추가되어야 한다.</li>
+        <li>전문 분야에서는 근거 수준과 한계까지 요구해야 과신을 줄일 수 있다.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="note">종합하면 기사 속 프롬프트들은 기능적 프롬프트의 핵심 원칙에 대체로 적합하며, 특히 명확성·구조화·맥락 보완·실행 가능성 측면에서 효과적이다.</p>
+</section>
+
+<section class="slide">
+  <h2>재무상태표 원본</h2>
+  <img class="finance-img" src="data:image/jpeg;base64,TOO_LONG_PLACEHOLDER" alt="재무상태표 원본 이미지">
+</section>
+
+<section class="slide">
+  <h2>재무상태표의 핵심 구조 설명</h2>
+  <div class="two-col">
+    <div class="panel">
+      <h3>자산</h3>
+      <p>자산은 기업이 보유한 경제적 자원이다. 제시된 재무상태표에서 자산총계는 <span class="big-number">353,521,600,987원</span>이며, 유동자산과 비유동자산으로 구분된다.</p>
+    </div>
+    <div class="panel">
+      <h3>부채와 자본</h3>
+      <p>부채는 외부에 갚아야 할 의무이고, 자본은 기업 소유자의 몫이다. 부채총계는 4,578,086,272원, 자본총계는 348,943,514,715원이다.</p>
+    </div>
+  </div>
+  <p class="note">재무상태표는 항상 자산 = 부채 + 자본의 구조를 가진다.</p>
+</section>
+
+<section class="slide">
+  <h2>이해관계자 관점의 종합 해석</h2>
+  <div class="two-col">
+    <div class="panel">
+      <h3>안정성</h3>
+      <p>자산총계에 비해 부채 규모가 작고 자본총계가 큰 편이므로, 재무구조는 안정적으로 해석할 수 있다. 투자자와 채권자는 기업의 지급능력과 장기적 안정성을 판단할 때 이 정보를 활용한다.</p>
+    </div>
+    <div class="panel">
+      <h3>의사결정 활용</h3>
+      <p>경영자는 자산 구성과 자본 구조를 통해 투자 여력과 위험 수준을 점검할 수 있다. 특히 유동자산, 비유동자산, 부채 규모를 함께 보면 기업의 단기 유동성과 장기 재무건전성을 설명할 수 있다.</p>
+    </div>
+  </div>
+</section>
+
+<div class="help" id="help">
+  <div class="help-box">
+    <h2>Keyboard Help</h2>
+    <p>Click / Enter / Space / → : Next</p>
+    <p>← : Previous</p>
+    <p>K : Show or hide this help</p>
+  </div>
+</div>
+
+<script>
+const slides = [...document.querySelectorAll('.slide')];
+let idx = 0;
+function show(i) {
+  slides[idx].classList.remove('active');
+  idx = (i + slides.length) % slides.length;
+  slides[idx].classList.add('active');
+}
+function next() { show(idx + 1); }
+function prev() { show(idx - 1); }
+document.addEventListener('click', e => {
+  if (!e.target.closest('#help')) next();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'k' || e.key === 'K') {
+    document.getElementById('help').classList.toggle('show'); return;
+  }
+  if (['Enter',' ','ArrowRight'].includes(e.key)) next();
+  if (e.key === 'ArrowLeft') prev();
+});
+</script>
+</body>
+</html>
